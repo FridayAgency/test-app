@@ -1,20 +1,19 @@
+/** @format */
+
 import Image from "next/image";
 import styles from "./page.module.css";
 
+import { ClassName } from "@fridayagency/classnames";
+
 export default function Home() {
+  const className = new ClassName("page");
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
+        <Image className={styles.logo} src="/next.svg" alt="Next.js logo" width={180} height={38} priority />
         <ol>
           <li>
+            classname = {className.toString()}
             Get started by editing <code>app/page.tsx</code>.
           </li>
           <li>Save and see your changes instantly.</li>
@@ -27,13 +26,7 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
+            <Image className={styles.logo} src="/vercel.svg" alt="Vercel logomark" width={20} height={20} />
             Deploy now
           </a>
           <a
@@ -52,13 +45,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
+          <Image aria-hidden src="/file.svg" alt="File icon" width={16} height={16} />
           Learn
         </a>
         <a
@@ -66,13 +53,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
+          <Image aria-hidden src="/window.svg" alt="Window icon" width={16} height={16} />
           Examples
         </a>
         <a
@@ -80,13 +61,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
+          <Image aria-hidden src="/globe.svg" alt="Globe icon" width={16} height={16} />
           Go to nextjs.org →
         </a>
       </footer>
